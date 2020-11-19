@@ -36,7 +36,6 @@ while (	$rs=mysqli_fetch_assoc($result)) {
 	echo "<td>{$rs['title']}</td>";
 	echo "<td>" , htmlspecialchars($rs['content']), "</td>";
 	echo "<td>" ;
-	echo "<a href='todoReject.php?id={$rs['id']}'>Not OK</a>" . "</td></tr>";
 }
 
 $result=mysqli_query($conn,$sql);

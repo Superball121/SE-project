@@ -9,7 +9,7 @@ $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>無標題文件</title>
+<title>老師頁面</title>
 </head>
 <body>
 <p>project</p>
@@ -32,7 +32,7 @@ $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
 $i=0;
 while (	$rs=mysqli_fetch_assoc($result)) {
 	$i++;
-	echo "<tr><td>" . $rs['id'] . "</td>";
+    echo "<tr><td>" . $rs['id'] . "</td>";
 	echo "<td>{$rs['title']}</td>";
 	echo "<td>" , htmlspecialchars($rs['content']), "</td>";
 	echo "<td>" ;

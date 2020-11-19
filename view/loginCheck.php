@@ -13,7 +13,7 @@ if (checkUserIDPwd($userName, $passWord)) {
   }else if($_SESSION['uID']=='secretary'){
     header("Location: secView.php");
   }else{
-    // header("Location: prinView.php");
+    header("Location: prinView.php");
     // echo $userName;
   }
 } else {

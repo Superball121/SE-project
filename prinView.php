@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<a href="loginForm.php">Login</a> ||| <a href="todoEditForm.php?id=-1">Add Task</a> <br>
+<a href="check.php">前往審核</a> ||| <a href="todoEditForm.php?id=-1">Add Task</a> <br>
 <br />
 <table width="200" border="1">
   <tr><td>申請人(學生), name :</td></tr>

@@ -23,5 +23,5 @@ if ($msgID>0) {
 			break;
 	}
 }
-header("Location: ../view/teaView.php?m=$msg");
+header("Location: ../view/prjView.php?m=$msg");
 ?>

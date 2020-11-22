@@ -14,7 +14,8 @@ if (checkUserIDPwd($userName, $passWord)) {
     echo $_SESSION['uID'] ;
     header("Location: ./prjView.php");
   }elseif($_SESSION['uID'] == 'secretary'){
-    header("Location: ./prjView.php");
+    echo $_SESSION['uID'] ;
+    header("Location: secView.php");
   }else{
     header("Location: ./prjView.php");
     // header("Location: ../prinView.php");

@@ -76,14 +76,13 @@ while ($rs = mysqli_fetch_assoc($result)){
 	switch($rs['status']) {
 		case 0:
 			if ($bossMode == 1) {
-				echo "<a href='edit.php?id={$rs['id']}'>opinion</a>  ";
-				echo "<a href='todoSetControl.php?act=finish&id={$rs['id']}'>ok</a>  ";	
+				echo "<a href='teaOpi.php?id={$rs['id']}'>opinion</a>  ";
 			}
 			break;
-		case 1;
+		case 1:
 			if ($bossMode == 2) {
-				echo "<a href='secEditForm.php?id={$rs['id']}'>opinion</a>  ";
-				echo "<a href='todoSetControl.php?act=secfinish&id={$rs['id']}'>ok</a>  ";
+				echo "<a href='secOpi.php?id={$rs['id']}'>opinion1</a>  ";
+				echo "<a href='secSet.php?act=secfinish&id={$rs['id']}'>ok1</a>  ";
 			}
 			break;
 		case 2:

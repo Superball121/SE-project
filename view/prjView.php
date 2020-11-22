@@ -49,8 +49,8 @@ $jobStatus = array('未審核','老師已審核','秘書已審核','通過','不
     <td>mom</td>
     <td>dad</td>
 	<td>type</td>
-    <td>opinion-men</td>
-	<td>opinion-sec</td>
+    <td>tDes</td>
+	<td>sDes</td>
 	<td>result</td>
 	<td>status</td>
 	<td>-</td>

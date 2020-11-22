@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("dbconnect.php");
+require("../Model/dbconnect.php");
 //set the login mark to empty
 $_SESSION['uID'] = "";
 ?>

@@ -1,5 +1,5 @@
 <?php
-require("dbconnect.php");
+require("../Model/dbconnect.php");
 $status=mysqli_real_escape_string($conn,$_POST['status']);
 
 if ($status) { //if status is not empty

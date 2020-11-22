@@ -2,12 +2,19 @@
 require_once("dbconnect.php");
 
 function addPro($name,$stuID,$mom,$dad,$type) {
+	// echo $name;
+	// echo $stuID;
+	// echo $mom;
+	// echo $dad;
+	// echo $type;
+	// addPro($name,$stuID,$mom,$dad,$type);
 	global $conn;
-	$sql = "insert into todo (name,stuID,mom,dad,tDES,sDes,result,status) values ('$name','$stuID', '$mom', '$dad','$type','0,'0',0,0);";
+	$sql = "insert into project (name,stuID,mom,dad,type,tDES,sDes,result,status) values ('$name','$stuID', '$mom', '$dad','$type',0,0,0,0);";
 	mysqli_query($conn, $sql) or die("Insert failed, SQL query error"); //執行SQL	
 }
 
 function cancelJob($jobID) {
+	
 }
 
 function updateJob($id,$name,$stuID,$mom,$dad,$type,$tDes,$sDes,$status,$result) {
@@ -20,7 +27,11 @@ function updateJob($id,$name,$stuID,$mom,$dad,$type,$tDes,$sDes,$status,$result)
 	}
 }
 
-function getJobList($bossMode) {
+function getJobList() {
+	global $conn;
+	$sql = "select * from project where 1 order by status;";
+	$result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
+	return $result;
 }
 
 function setFinished($proID) {

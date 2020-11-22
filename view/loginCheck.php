@@ -12,11 +12,11 @@ if (checkUserIDPwd($userName, $passWord)) {
     header("Location: stuView.php");
   }elseif($_SESSION['uID'] == 'teacher'){
     echo $_SESSION['uID'] ;
-    header("Location: ./teaView.php");
+    header("Location: ./prjView.php");
   }elseif($_SESSION['uID'] == 'secretary'){
-    header("Location: ./teaView.php");
+    header("Location: ./prjView.php");
   }else{
-    header("Location: ./teaView.php");
+    header("Location: ./prjView.php");
     // header("Location: ../prinView.php");
   }
 } else {

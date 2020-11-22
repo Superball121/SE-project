@@ -15,12 +15,7 @@ $id=(int)$_POST['id'];
 // $urgent=mysqli_real_escape_string($conn,$_POST['urgent']);
 
 if ($name) { //if title is not empty
-	echo $name;
-	echo $stuID;
-	echo $mom;
-	echo $dad;
-	echo $type;
-	addPro($name,$stuID,$mom,$dad,$type);
+	// addPro($name,$stuID,$mom,$dad,$type);
 	updateJob($id,$name,$stuID,$mom,$dad,$type,$tDes,$sDes,$status,$result);
 	$msg="Message updateded";
 } else {

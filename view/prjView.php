@@ -40,7 +40,7 @@ $jobStatus = array('未審核','老師已審核','秘書已審核','通過','不
 <!-- <div> -->
 <!-- <?php echo $msg; ?> -->
 <!-- </div><hr> -->
-<a href="loginForm.php">login</a> 
+<a href="login.php">login</a> 
 <table width="200" border="1">
   <tr>
     <td>id</td>
@@ -76,7 +76,7 @@ while ($rs = mysqli_fetch_assoc($result)){
 	switch($rs['status']) {
 		case 0:
 			if ($bossMode == 1) {
-				echo "<a href='teaEditForm.php?id={$rs['id']}'>opinion</a>  ";
+				echo "<a href='edit.php?id={$rs['id']}'>opinion</a>  ";
 				echo "<a href='todoSetControl.php?act=finish&id={$rs['id']}'>ok</a>  ";	
 			}
 			break;

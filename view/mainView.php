@@ -22,8 +22,8 @@ if (isset($_GET['m'])){
 
 
 $result=getJobList($bossMode);
-$jobStatus = array('未完成','已完成','已結案','已取消');
-
+// $jobStatus = array('未完成','已完成','已結案','已取消');
+$jobStatus = array('未審核','老師已審核','秘書已審核','通過','不通過');
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

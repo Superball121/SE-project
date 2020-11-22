@@ -6,15 +6,18 @@ $userName = $_POST['id'];
 $passWord = $_POST['pwd'];
 
 if (checkUserIDPwd($userName, $passWord)) {
-  if($_SESSION['uID']=='student'){
+  $_SESSION['uID']=$userName;
+  if ($_SESSION['uID'] == 'student'){
+    // header("Location: mainView.php");
     header("Location: stuView.php");
-  }else if($_SESSION['uID']=='teacher'){
-    header("Location: teaView.php");
-  }else if($_SESSION['uID']=='secretary'){
-    header("Location: secView.php");
+  }elseif($_SESSION['uID'] == 'teacher'){
+    echo $_SESSION['uID'] ;
+    header("Location: ./prjView.php");
+  }elseif($_SESSION['uID'] == 'secretary'){
+    header("Location: ./prjView.php");
   }else{
-    header("Location: prinView.php");
-    // echo $userName;
+    header("Location: ./prjView.php");
+    // header("Location: ../prinView.php");
   }
 } else {
 	$_SESSION['uID']="";

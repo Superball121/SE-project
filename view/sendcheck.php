@@ -1,11 +1,12 @@
 <?php
-require("dbconnect.php");
+require("../Model/dbconnect.php");
 $status=mysqli_real_escape_string($conn,$_POST['status']);
+$id=mysqli_real_escape_string($conn,$_POST['id']);
 
 if ($status) { //if status is not empty
-	$sql = "insert into 1091se (status) values ('$status');";
-	mysqli_query($conn, $sql) or die("Insert failed, SQL query error"); //執行SQL
-	echo "Message added";
+	$sql = "UPDATE `project` SET `status` = '$status' WHERE `project`.`id` = '$id';";
+	mysqli_query($conn, $sql) or die("Update failed, SQL query error"); //執行SQL
+	echo "Status confirmed";
 } else {
 	echo "Message status cannot be empty";
 }

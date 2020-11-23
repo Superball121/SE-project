@@ -43,7 +43,7 @@ function setSecFinished($proID){
 
 function setClosed($proID) {
 	global $conn;
-	$sql = "update project set status = 3 where id=$jobID and status = 2;";
+	$sql = "update project set status = 3 where id=$proID and status = 2;";
 	mysqli_query($conn,$sql);
 }
 

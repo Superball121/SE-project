@@ -10,5 +10,6 @@ if ($sDes) { //if sDes is not empty
 } else {
 	$msg= "opinion cannot be empty";
 }
-header("Location: secView.php?m=$msg");
+// header("Location: secView.php?m=$msg");
+header("Location: prjView.php?m=$msg");
 ?>

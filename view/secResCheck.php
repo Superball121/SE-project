@@ -10,5 +10,5 @@ if ($result) { //if result is not empty
 } else {
 	$msg= "result cannot be empty";
 }
-header("Location: secView.php?m=$msg");
+header("Location: prjView.php?m=$msg");
 ?>

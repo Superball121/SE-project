@@ -12,11 +12,6 @@ function addPro($name,$stuID,$mom,$dad,$type) {
 	$sql = "insert into project (name,stuID,mom,dad,type,tDES,sDes,result,status) values ('$name','$stuID', '$mom', '$dad','$type',0,0,0,0);";
 	mysqli_query($conn, $sql) or die("Insert failed, SQL query error"); //執行SQL	
 }
-
-function cancelJob($jobID) {
-	
-}
-
 function updateJob($id,$name,$stuID,$mom,$dad,$type,$tDes,$sDes,$status,$result) {
 	global $conn;
 	if ($id== -1) {
@@ -36,12 +31,27 @@ function getJobList() {
 }
 
 function setFinished($proID) {
+	global $conn;
+	$sql = "update project set status = 1 where id=$proID and status = 0;";
+	mysqli_query($conn,$sql) or die("MySQL query error"); //執行SQL
 }
-
-function rejectJob($proID){
+function setSecFinished($proID){
+	global $conn;
+	$sql = "update project set status = 2 where id=$proID and status = 1;";
+	mysqli_query($conn,$sql) or die("MySQL query error"); //執行SQL
 }
 
 function setClosed($proID) {
+	global $conn;
+	$sql = "update project set status = 3 where id=$jobID and status = 2;";
+	mysqli_query($conn,$sql);
+}
+
+function cancelJob($proID) {
+	global $conn;
+	$sql = "update project set status = 4 where id=$proID and status = 2;";
+	mysqli_query($conn,$sql);
+	//return T/F
 }
 
 

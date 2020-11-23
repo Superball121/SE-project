@@ -56,6 +56,7 @@ $jobStatus = array('未審核','老師已審核','秘書已審核','通過','不
 	<td>-</td>
   </tr>
 <?php
+echo $bossMode;
 if ($bossMode == 0) {
 	echo "<a href='todoEditForm.php?id=-1'>申請補助</a>  ";
 					
@@ -77,18 +78,20 @@ while ($rs = mysqli_fetch_assoc($result)){
 		case 0:
 			if ($bossMode == 1) {
 				echo "<a href='teaOpi.php?id={$rs['id']}'>opinion</a>  ";
+				echo "<a href='../control/setControl.php?act=finish&id={$rs['id']}'>ok</a>";
 			}
 			break;
 		case 1:
 			if ($bossMode == 2) {
 				echo "<a href='secOpi.php?id={$rs['id']}'>opinion1</a>  ";
-				echo "<a href='secSet.php?act=secfinish&id={$rs['id']}'>ok1</a>  ";
+				echo "<a href='secResult.php?id={$rs['id']}'>result</a>  ";
+				echo "<a href='../control/setControl.php?act=secfinish&id={$rs['id']}'>ok1</a>  ";
 			}
 			break;
 		case 2:
 			if($bossMode == 3){
-			echo "<a href='todoSetControl.php?act=close&id={$rs['id']}'>yes</a>  " ;
-			echo "<a href='todoSetControl.php?act=cancel&id={$rs['id']}'>no</a>  " ;
+			echo "<a href='../control/setControl.php?act=close&id={$rs['id']}'>yes</a>  " ;
+			echo "<a href='../control/setControl.php?act=cancel&id={$rs['id']}'>no</a>  " ;
 			}
 			break;
 		default:
